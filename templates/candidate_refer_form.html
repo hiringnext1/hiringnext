@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+    <div class="margin-top-30">
+        <!-- Titlebar
+        ================================================== -->
+        <div id="titlebar" class="gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <!-- body-content -->
+
+                        <h2 class="text-center">Candidate Refer Form<br/>
+                            <small> Refer Candidates & earn money on every successful closer.</small>
+                        </h2>
+                        <div class="white-space-20"></div>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <!-- form contact -->
+                                {#                            <form>#}
+                                {#                                {% csrf_token %}#}
+                                {#                                {{ form.as_p }}#}
+                                {#                                <div class="form-group text-center">#}
+                                {#                                    <div class="white-space-10"></div>#}
+                                {#                                    <button type="submit" class="btn btn-theme btn-lg btn-long btn-t-primary btn-pill">#}
+                                {#                                        Submit#}
+                                {#                                    </button>#}
+                                {#                                </div>#}
+                                {#                            </form><!-- end form contact -->#}
+                                <form method="POST" role="form">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                                {#                            <form>#}
+                                {#                                <div class="form-group">#}
+                                {#                                    {% csrf_token %}#}
+                                {#                                    {{ form.as_p }}#}
+                                {#                                </div>#}
+                                {#                                <button type="submit" class="btn btn-primary">Submit</button>#}
+                                {#                            </form>#}
+                                {#                            <div class="white-space-10"></div>#}
+                                {#                            <p class="text-center"><span class="span-line">OR</span></p>#}
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

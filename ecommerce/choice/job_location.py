@@ -1,0 +1,15 @@
+JOB_LOCATION_CHOICES = (
+    ('Ahmadabad', ('Ahmadabad')),
+    ('Vadodara', ('Vadodara')),
+    ('Surat', ('Surat')),
+    ('Rajkot', ('Rajkot')),
+    ('Bharuch', ('Bharuch')),
+    ('Ankleshwar', ('Ankleshwar')),
+    ('Vapi', ('Vapi')),
+    ('Valsad', ('Valsad')),
+    ('Anand', ('Anand')),
+    ('Mehsana', ('Mehsana')),
+    ('Bhavnagar', ('Bhavnagar')),
+    ('Junagadh', ('Junagadh')),
+    ('Jamnagar', ('Jamnagar')),
+)

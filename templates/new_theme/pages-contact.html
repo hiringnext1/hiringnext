@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+    <!-- Wrapper -->
+    <div id="wrapper" xmlns="http://www.w3.org/1999/html">
+
+        <!-- Header Container
+        ================================================== -->
+        <header id="header-container" class="fullwidth">
+
+        </header>
+        <div class="clearfix"></div>
+        <!-- Header Container / End -->
+
+        <!-- Titlebar
+        ================================================== -->
+        <div id="titlebar" class="gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <h2>Contact</h2>
+
+                        <!-- Breadcrumbs -->
+                        <nav id="breadcrumbs" class="dark">
+                            <ul>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li>Contact</li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Content
+        ================================================== -->
+
+
+        <!-- Container -->
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-12">
+                    <div class="contact-location-info margin-bottom-50">
+                        <div class="contact-address">
+                            <ul>
+                                <li class="contact-address-headline">Our Office</li>
+                                <li>301, Maryland Complex, Old Padra Road, Vadodara</li>
+                                <li>Phone: 9090909090</li>
+                                <li><a href="#">contact@hiringnext.com</a></li>
+                                <li>
+                                    <div class="freelancer-socials">
+                                        <ul>
+                                            <li><a href="#" title="Dribbble" data-tippy-placement="top"><i
+                                                    class="icon-brand-dribbble"></i></a></li>
+                                            <li><a href="#" title="Twitter" data-tippy-placement="top"><i
+                                                    class="icon-brand-twitter"></i></a></li>
+                                            <li><a href="#" title="Behance" data-tippy-placement="top"><i
+                                                    class="icon-brand-behance"></i></a></li>
+                                            <li><a href="#" title="GitHub" data-tippy-placement="top"><i
+                                                    class="icon-brand-github"></i></a></li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div id="single-job-map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29531.36211763826!2d73.1477117!3d22.2999402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5dc5c6aaaab%3A0x73fd221817186d74!2sEmpower+Consultant!5e0!3m2!1sen!2sin!4v1543944969334"
+                                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-8 col-lg-8 offset-xl-2 offset-lg-2">
+
+                    <section id="contact" class="margin-bottom-60">
+                        <h3 class="headline margin-top-15 margin-bottom-35">Any questions? Feel free to contact us!</h3>
+
+                        <form method="post" name="contactform" id="contactform" autocomplete="on">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    {% csrf_token %}
+                                    {% bootstrap_form form %}
+                                </div>
+
+                            </div>
+                            <button type="submit" class="submit button margin-top-15"> Submit </button>
+
+                        </form>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Container / End -->
+
+    </div>
+    <!-- Wrapper / End -->
+
+{% endblock %}

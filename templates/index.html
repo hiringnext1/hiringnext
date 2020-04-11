@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <!-- main-header -->
+        <header class="main-header">
+
+            <div class="hero-header">
+                <div class="inner-hero-header">
+                    <div class="container">
+                        <div class="text-center logo"><h1 style="color: white; font-size: 50px; font-weight: lighter">
+                            Welcome To HiringNext !!</h1>
+                            <p style="color: white; font-size: 20px; font-weight: lighter">
+                                Where Everyone Wins,
+                                <span><a href="{% url 'about' %}" style="color: white; font-size: 20px; font-weight: lighter"> learn how?</a> </span>
+                            </p></div>
+                        <div class="relative">
+                            <i class="fa fa-globe ic-fade-globe"></i>
+                            <!-- form search -->
+                            <form class="form-search-home" method="GET" action="{% url 'search' %}">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>What</label>
+
+                                            <input class="form-control  input-lg"
+                                                   type="text" name="q" placeholder="job title, keywords or company name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Where</label>
+                                            <input class="form-control input-lg"
+                                                   placeholder="city, province, or region">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-t-primary btn-lg btn-theme btn-pill btn-block">Find a Jobs
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#modal-advanced" data-toggle="modal">Advanced Job Search</a>
+                                </div>
+                            </form> <!-- end form search -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header><!-- end main-header -->
+
+
+        <!-- body-content -->
+        <div class="body-content clearfix">
+
+            <!-- box simple static -->
+            <div class="block-section bg-color1">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <h3 class="font-2x ">{{ total_profiles.count }}</h3>
+                            <h4 class="color-text">Registered JobSeekers</h4>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="font-2x ">{{ total_opening.count }}</h3>
+                            <h4 class="color-text">Active Jobs Posted</h4>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="font-2x ">{{ total_companies.count }}</h3>
+                            <h4 class="color-text">Awesome Company</h4>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end box simple static -->
+        </div><!--end body-content -->
+  <!-- end wrapper page -->
+{% endblock %}

@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% load humanize %}
+
+
+{% block content %}
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header Container
+        ================================================== -->
+        <div class="clearfix"></div>
+        <!-- Header Container / End -->
+
+
+        <!-- Titlebar
+        ================================================== -->
+        <div class="single-page-header" data-background-image="{% static 'new_theme/images/single-company.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="single-page-header-inner">
+                            <div class="left-side">
+                                <div class="header-image"><a href="#"><img
+                                        src="{% static 'new_theme/images/company-logo-03a.png' %}" alt=""></a></div>
+                                <div class="header-details">
+                                    <h3>{{ object.job_title }}</h3>
+                                    <h5>About the Employer</h5>
+                                    <ul>
+                                        <li><a href="single-company-profile.html"><i
+                                                class="icon-material-outline-business"></i> {{ object.company_name }}
+                                        </a></li>
+                                        <li>
+                                            <div class="star-rating"
+                                                 data-rating="{{ object.company_name.company_review }}"></div>
+                                        </li>
+                                        <li><img class="flag" src="{% static 'new_theme/images/flags/in.svg' %}"
+                                                 alt=""> {{ object.job_location }}</li>
+                                        <li>
+                                            <div class="verified-badge-with-title">Verified</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <div class="salary-box">
+                                    <div class="salary-type">Refer Amount</div>
+                                    <div class="salary-amount icon-line-awesome-rupee">{{ object.referral_reward | intcomma }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Page Content
+        ================================================== -->
+        <div class="container">
+            <div class="row">
+
+                <!-- Content -->
+                <div class="col-xl-8 col-lg-8 content-right-offset">
+
+                    <div class="single-page-section">
+                        <h3 class="margin-bottom-25">About Company</h3>
+
+                        <p>{{ object.company_name.company_profile | linebreaks }}</p>
+
+                    </div>
+
+                    <div class="single-page-section">
+                        <h3 class="margin-bottom-25">Job Objective</h3>
+                        <p>{{ object.job_objective | linebreaks }}</p>
+                    </div>
+
+                    <div class="single-page-section">
+                        <h3 class="margin-bottom-25">Job Description</h3>
+                        <p>{{ object.job_description | linebreaks }}</p>
+                    </div>
+
+
+                    <div class="single-page-section">
+                        <h3 class="margin-bottom-25">Questionnaires</h3>
+                        {% for list_question in object.Questions.all %}
+
+                            <ul class="list-1">
+                                <li>{{ list_question }}</li>
+                            </ul>
+
+                        {% endfor %}
+                    </div>
+
+                    <div class="single-page-section">
+                        <h3 class="margin-bottom-25">Similar Jobs ({{ object.industry.jobopening_set.count }})</h3>
+
+                        <!-- Listings Container -->
+                        <div class="listings-container grid-layout">
+                            {% for by_function in object.industry.jobopening_set.all  %}
+
+                                <!-- Job Listing -->
+                                <a href="{{ by_function.get_absolute_url }}" class="job-listing">
+
+                                    <!-- Job Listing Details -->
+                                    <div class="job-listing-details">
+                                        <!-- Logo -->
+                                        <div class="job-listing-company-logo">
+                                            <img src="{% static 'new_theme/images/company-logo-02.png' %}" alt="">
+                                        </div>
+
+                                        <!-- Details -->
+                                        <div class="job-listing-description">
+                                            <h4 class="job-listing-company">{{ by_function.company_name }}</h4>
+                                            <h3 class="job-listing-title">{{ by_function.job_title }}</h3>
+                                        </div>
+                                    </div>
+
+                                    <!-- Job Listing Footer -->
+                                    <div class="job-listing-footer">
+                                        <ul>
+                                            <li>
+                                                <i class="icon-material-outline-location-on"></i> {{ by_function.job_location }}
+                                            </li>
+                                            <li>
+                                                <i class="icon-material-outline-account-balance-wallet"></i> {{ by_function.max_salary_budget }}
+                                                lac
+                                            </li>
+                                            <li>
+                                                <i class="icon-material-outline-access-time"></i> {{ by_function.job_created | date:"M d, Y" }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+
+                            {% endfor %}
+
+                        </div>
+                        <!-- Listings Container / End -->
+
+                    </div>
+                </div>
+
+
+                <!-- Sidebar -->
+                <div class="col-xl-4 col-lg-4">
+                    <div class="sidebar-container">
+
+                        <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">Apply Now <i
+                                class="icon-material-outline-arrow-right-alt"></i></a>
+
+                        <a href="{% url 'candidate-refer' %}" class="apply-now-button">Refer & Earn <i
+                                class="icon-material-outline-arrow-right-alt"></i></a>
+
+                        <!-- Sidebar Widget -->
+                        <div class="sidebar-widget">
+                            <h3>Share & Earn</h3>
+
+                            <!-- Copy URL -->
+                            <div class="copy-url">
+                                <input id="copy-url" type="text" value="" class="with-border">
+                                <button class="copy-url-button ripple-effect" data-clipboard-target="#copy-url"
+                                        title="Copy to Clipboard" data-tippy-placement="top"><i
+                                        class="icon-material-outline-file-copy"></i></button>
+                            </div>
+
+                            <!-- Share Buttons -->
+                            <div class="share-buttons margin-top-25">
+                                <div class="share-buttons-trigger"><i class="icon-feather-share-2"></i></div>
+                                <div class="share-buttons-content">
+                                    <span>Interesting? <strong>Share It!</strong></span>
+                                    <ul class="share-buttons-icons">
+                                        <li>
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"
+                                               data-button-color="#3b5998" title="Share on Facebook"
+                                               data-tippy-placement="top"><i class="icon-brand-facebook-f"></i></a></li>
+                                        <li><a href="#" data-button-color="#1da1f2" title="Share on Twitter"
+                                               data-tippy-placement="top"><i class="icon-brand-twitter"></i></a></li>
+                                        <li><a href="#" data-button-color="#dd4b39" title="Share on Google Plus"
+                                               data-tippy-placement="top"><i class="icon-brand-google-plus-g"></i></a>
+                                        </li>
+                                        <li><a href="#" data-button-color="#0077b5" title="Share on LinkedIn"
+                                               data-tippy-placement="top"><i class="icon-brand-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Widget -->
+                        <div class="sidebar-widget">
+                            <div class="job-overview">
+                                <div class="job-overview-headline">Job Summary</div>
+                                <div class="job-overview-inner">
+                                    <ul>
+                                        <li>
+                                            <i class="icon-line-awesome-rupee"></i>
+                                            <span>Experience </span>
+                                            <h5>{{ object.experience }} Years</h5>
+                                        </li>
+                                        <li>
+                                            <i class="icon-material-outline-location-on"></i>
+                                            <span>Location</span>
+                                            <a href="{{ object.job_location.get_absolute_url }}">
+                                                <h5>
+                                                    {{ object.job_location }}
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <i class="icon-line-awesome-rupee"></i>
+                                            <span>Min. Salary</span>
+                                            <h5>{{ object.min_salary_budget }} Lac</h5>
+                                        </li>
+
+                                        <li>
+                                            <i class="icon-line-awesome-rupee"></i>
+                                            <span>Max. Salary</span>
+                                            <h5>{{ object.max_salary_budget }} Lac</h5>
+                                        </li>
+
+                                        <li>
+                                            <i class="icon-material-outline-location-on"></i>
+                                            <span>Industry</span>
+                                            <h5>{{ object.industry }}</h5>
+                                        </li>
+                                        <li>
+                                            <i class="icon-material-outline-access-time"></i>
+                                            <span>Date Posted</span>
+                                            <h5>{{ object.job_created | date:"M d, Y" }}</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Wrapper / End -->
+
+
+    <!-- Apply for a job popup
+    ================================================== -->
+    <div id="small-dialog" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
+
+        <!--Tabs -->
+        <div class="sign-in-form">
+
+            <ul class="popup-tabs-nav">
+                <li><a href="#tab">Apply Now</a></li>
+            </ul>
+
+            <div class="popup-tabs-container">
+
+                <!-- Tab -->
+                <div class="popup-tab-content" id="tab">
+
+                    <!-- Welcome Text -->
+                    <div class="welcome-text">
+                        <h3>Apply Form ({{ object.job_title }})</h3>
+                    </div>
+
+                    <!-- Form -->
+                    <form method="post" id="apply-now-form">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+{#                        {% for que in object.Questions.all %}#}
+{#                            <div>#}
+{#                                <i class="icon-material-outline-account-circle"></i>#}
+{#                                {{ que }}#}
+{#                                <input type="text" class="input-text with-border" name="name" id="name"#}
+{#                                       placeholder="Answer Here" required/>#}
+{#                            </div>#}
+{#                        {% endfor %}#}
+                        <!-- Button -->
+                        <button class="button margin-top-35 full-width button-sliding-icon ripple-effect" type="submit"
+                                form="apply-now-form">Apply Now <i class="icon-material-outline-arrow-right-alt"></i>
+                        </button>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Apply for a job popup / End -->
+
+
+        <!-- Apply for a job popup
+    ================================================== -->
+    <div id="small-dialog" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
+
+        <!--Tabs -->
+        <div class="sign-in-form">
+
+            <ul class="popup-tabs-nav">
+                <li><a href="#tab">Apply Now</a></li>
+            </ul>
+
+            <div class="popup-tabs-container">
+
+                <!-- Tab -->
+                <div class="popup-tab-content" id="tab">
+
+                    <!-- Welcome Text -->
+                    <div class="welcome-text">
+                        <h3>Apply Form ({{ object.job_title }})</h3>
+                    </div>
+
+                    <!-- Form -->
+                    <form method="post" id="apply-now-form">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+{#                        {% for que in object.Questions.all %}#}
+{#                            <div>#}
+{#                                <i class="icon-material-outline-account-circle"></i>#}
+{#                                {{ que }}#}
+{#                                <input type="text" class="input-text with-border" name="name" id="name"#}
+{#                                       placeholder="Answer Here" required/>#}
+{#                            </div>#}
+{#                        {% endfor %}#}
+                        <!-- Button -->
+                        <button class="button margin-top-35 full-width button-sliding-icon ripple-effect" type="submit"
+                                form="apply-now-form">Apply Now <i class="icon-material-outline-arrow-right-alt"></i>
+                        </button>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

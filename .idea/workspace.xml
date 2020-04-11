@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a20fe15a-34c8-4964-8648-0117b53fd2de" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="sampledjango_indeedjobs: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="sqlite_master: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>search</find>
+      <find>lac</find>
+      <find>brows</find>
+      <find>index</find>
+      <find>middl</find>
+      <find>middle</find>
+      <find>downloader</find>
+      <find>block</find>
+      <find>browse</find>
+      <find>feature</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1TTdXJ3vduWLsQV4PBTrlC7oSMT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/jobs_by_categories" />
+      <recent name="$PROJECT_DIR$/templates/Jobs_by_Location" />
+      <recent name="$PROJECT_DIR$/static/new_theme" />
+      <recent name="$PROJECT_DIR$/sampledjango" />
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/jobs_by_location" />
+      <recent name="$PROJECT_DIR$/templates/unused" />
+      <recent name="$PROJECT_DIR$/templates/sampledjango" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="scrapydjango" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ecommerce" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="scrapydjango.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a20fe15a-34c8-4964-8648-0117b53fd2de" name="Default Changelist" comment="" />
+      <created>1559487884778</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559487884778</updated>
+      <workItem from="1559487886617" duration="2001000" />
+      <workItem from="1559580427498" duration="4945000" />
+      <workItem from="1559587055437" duration="2541000" />
+      <workItem from="1559666271588" duration="2241000" />
+      <workItem from="1559672685890" duration="212000" />
+      <workItem from="1559751210472" duration="1290000" />
+      <workItem from="1559754138868" duration="558000" />
+      <workItem from="1559925997285" duration="1484000" />
+      <workItem from="1559927659277" duration="2617000" />
+      <workItem from="1560007910848" duration="736000" />
+      <workItem from="1560011117583" duration="5476000" />
+      <workItem from="1560046707149" duration="22198000" />
+      <workItem from="1560184503508" duration="4832000" />
+      <workItem from="1560357129126" duration="4161000" />
+      <workItem from="1560386861230" duration="6051000" />
+      <workItem from="1560531004207" duration="6043000" />
+      <workItem from="1560618473304" duration="3509000" />
+      <workItem from="1560785828283" duration="3686000" />
+      <workItem from="1560874951842" duration="1170000" />
+      <workItem from="1560880271640" duration="1634000" />
+      <workItem from="1560881967633" duration="3408000" />
+      <workItem from="1560962669604" duration="8776000" />
+      <workItem from="1561041271445" duration="15662000" />
+      <workItem from="1561206353664" duration="9336000" />
+      <workItem from="1561479621370" duration="5030000" />
+      <workItem from="1561568175430" duration="902000" />
+      <workItem from="1561868023546" duration="1413000" />
+      <workItem from="1561869858965" duration="672000" />
+      <workItem from="1561878792216" duration="631000" />
+      <workItem from="1561907869616" duration="1082000" />
+      <workItem from="1562485528399" duration="36000" />
+      <workItem from="1557215159409" duration="25000" />
+      <workItem from="1557215272641" duration="28000" />
+      <workItem from="1567842582076" duration="1178000" />
+      <workItem from="1562487470685" duration="1754000" />
+      <workItem from="1562602301787" duration="611000" />
+      <workItem from="1562606073488" duration="1764000" />
+      <workItem from="1562777344197" duration="1675000" />
+      <workItem from="1562779990302" duration="139000" />
+      <workItem from="1562780269041" duration="1533000" />
+      <workItem from="1563078296066" duration="1716000" />
+      <workItem from="1563080173490" duration="1759000" />
+      <workItem from="1563082012558" duration="1743000" />
+      <workItem from="1563083852321" duration="1716000" />
+      <workItem from="1563088887648" duration="333000" />
+      <workItem from="1563091337499" duration="45000" />
+      <workItem from="1563091464058" duration="36000" />
+      <workItem from="1563109793445" duration="1769000" />
+      <workItem from="1563282074849" duration="304000" />
+      <workItem from="1563283069855" duration="1257000" />
+      <workItem from="1563284379748" duration="5161000" />
+      <workItem from="1563432232166" duration="1618000" />
+      <workItem from="1563637085150" duration="5270000" />
+      <workItem from="1563673665184" duration="1180000" />
+      <workItem from="1563966164832" duration="2838000" />
+      <workItem from="1564125523034" duration="2015000" />
+      <workItem from="1573488070935" duration="2505000" />
+      <workItem from="1573572678695" duration="482000" />
+      <workItem from="1573574248919" duration="7000" />
+      <workItem from="1573575485817" duration="924000" />
+      <workItem from="1586602019613" duration="634000" />
+      <workItem from="1586602717863" duration="733000" />
+      <workItem from="1586603468460" duration="1142000" />
+      <workItem from="1586606513836" duration="1458000" />
+    </task>
+    <task id="LOCAL-00001" summary="project update">
+      <created>1563298857362</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563298857362</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project update" />
+    <option name="LAST_COMMIT_MESSAGE" value="project update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="141" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586606358776">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="141" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606358776" />
+    <state x="345" y="27" width="666" height="741" key="#scrapydjango" timestamp="1586603650318">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="345" y="27" width="666" height="741" key="#scrapydjango/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586603650318" />
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom" timestamp="1586606551488">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
+    <state width="1320" height="175" key="GridCell.Tab.0.center" timestamp="1586606551488">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
+    <state width="1320" height="175" key="GridCell.Tab.0.left" timestamp="1586606551488">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
+    <state width="1320" height="175" key="GridCell.Tab.0.right" timestamp="1586606551488">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
+    <state x="172" y="31" key="SettingsEditor" timestamp="1586607633291">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="172" y="31" key="SettingsEditor/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586607633291" />
+  </component>
+</project>

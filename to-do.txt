@@ -1,0 +1,42 @@
+http://xidea.online/servers.html
+
+Features of HiringNext:
+
+> Job Posting - By recruiters & Admin Only
+> Employee - Job Seeker - Dashboard
+> Referrer - Dashboard
+> Staff Dashboard
+> Admin Dashboard
+> User Management
+> Email Management
+> Email Updates - Mass Mailing - Email Marketing Management
+> SEO Friendly
+
+> Refer Module
+> Refer Employee & Earn
+> Referrer Dashboard
+
+
+> User Type:
+    Employee
+    Referrer
+
+> Assign Job to Recruiter:
+    Every updates get email notification & display on Dashboard
+
+> Improve Tags in Job Listing Page > display duplicate tags. > Fix It
+
+$$ Add Some Details in Models:
+
+> Job Categories - Functional Area Models
+    > Add Image
+    > Add Some short information about functional area
+    > Add Min. 8 functional areas lists
+
+> Add Choice Model or Fix row for Employment Type
+> Add Min & Max. Salay Budget
+> Add Per Annul Salary only.
+
+
+Priority:
+> Create Job Seeker / Referrer Dashboard > Profile.
