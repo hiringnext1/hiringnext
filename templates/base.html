@@ -105,9 +105,16 @@
                                     </div>
 
                                     <ul class="user-menu-small-nav">
-                                        <li><a href="{% url 'dashboard-admin' %}"><i
-                                                class="icon-material-outline-dashboard"></i>
-                                            Dashboard</a></li>
+                                        {% if user.is_admin %}
+                                            <li><a href="{% url 'dashboard-admin' %}"><i
+                                                    class="icon-material-outline-dashboard"></i>
+                                                Dashboard</a></li>
+                                        {% else %}
+
+                                            <li><a href="{% url 'dashboard-user' %}"><i
+                                                    class="icon-material-outline-dashboard"></i>
+                                                Dashboard</a></li>
+                                        {% endif %}
                                         <li><a href="dashboard-settings.html"><i
                                                 class="icon-material-outline-settings"></i>
                                             Settings</a></li>

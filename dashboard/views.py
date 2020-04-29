@@ -56,6 +56,31 @@ class AdminDashboard(ListView):
         return context
 
 
+class UserDashboard(ListView):
+    model = Jobseeker
+    template_name = 'new_theme/dashboard/user-dashboard.html'
+    paginate_by = 5
+
+    def get_context_data(self, **kwargs):
+        context = super(UserDashboard, self).get_context_data(**kwargs)
+        context.update({
+            'admin_dash': Jobopening.objects.all(),
+            'total_opening': Jobopening.objects.all().order_by('-job_created'),
+            'active_opening': Jobopening.objects.all().order_by('-job_created').distinct()[:5],
+            'total_companies': CompanyProfile.objects.all(),
+            'total_profiles': Jobseeker.objects.all(),
+            'total_revenues': '11111111',
+            'monthly_revenues': '11111',
+            'total_closed_positions': '1111',
+            'all_finders': Jobseeker.objects.count() + ReferCandidate.objects.count(),
+            'total_job_referrer': ReferCandidate.objects.all(),
+            'assign_recruiter': Jobopening.objects.all(),
+            'job_opening_list': Jobopening.objects.all(),
+
+        })
+
+        return context
+
 @login_required()
 def total_job_opening_list(request):
     context = {
