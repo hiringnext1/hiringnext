@@ -16,7 +16,8 @@ class Jobseeker(models.Model):
         AUTH_USER_MODEL,
         related_name="candidate_user",
         null=True,
-        blank=True
+        blank=True,
+        on_delete=models.CASCADE
 
     )
     apply_for_the_post_of = models.ForeignKey(Jobopening, on_delete=models.CASCADE, null=True)
@@ -45,10 +46,11 @@ class Jobseeker(models.Model):
     resume_summary = models.TextField()
     resume = models.FileField(upload_to='documents/%Y/%m/%d/')
     resume_created = models.DateTimeField(auto_created=True, auto_now_add=True)
-    feedback_update = models.CharField(choices=CANDIDATE_FEEDBACK_CHOICES, max_length=20)
+    feedback_update = models.CharField(choices=CANDIDATE_FEEDBACK_CHOICES, max_length=30)
 
     def __str__(self):
         return self.name
+
 
 from django.contrib.auth import get_user_model
 
@@ -58,10 +60,11 @@ class ReferCandidate(models.Model):
         get_user_model(),
         related_name="referred_candidate_by",
         null=True,
-        blank=True
+        blank=True,
+        on_delete=models.CASCADE
 
     )
-    user = models.ForeignKey(User, null=True)
+    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     refer_for_the_post_of = models.ForeignKey(Jobopening, on_delete=models.CASCADE,
                                               verbose_name='Referred for the post of')
     candidate_name = models.CharField(max_length=50, verbose_name='Candidate Name')

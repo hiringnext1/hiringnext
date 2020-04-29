@@ -1,12 +1,12 @@
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 # Create your views here.
 from django.views.generic import DetailView
 from django.views.generic.edit import FormMixin, FormView
-from django.views.generic.list import ListView, MultipleObjectMixin
-from django_filters.views import FilterView, FilterMixin
+from django.views.generic.list import ListView
+from django_filters.views import FilterView
 from taggit.models import Tag
 
 from ecommerce.choice.job_location import JOB_LOCATION_CHOICES
@@ -14,12 +14,10 @@ from ecommerce.forms import ContactForm
 from employer.models import CompanyProfile
 from jobseeker.forms import ReferCandidateForm
 from jobseeker.models import Jobseeker
-from .filters import JobFilter, IndustryJobFilter
+from .filters import JobFilter
 from .forms import JobopeningForm, JobApplyForm
 from .models import Jobopening, ApplicationQuestions, JobLocation, Industry, FunctionalArea
-from django.core.paginator import Paginator
-from django.core.paginator import EmptyPage
-from django.core.paginator import PageNotAnInteger
+
 
 class TagMixin(object):
     def get_context_data(self, kwargs):
@@ -174,7 +172,6 @@ class JobopeningDetailView(TagMixin, FormMixin, DetailView):
     def form_valid(self, form):
         form.save(commit=True)
         return super(JobopeningDetailView, self).form_valid(form)
-
 
         # def apply(self, request):
         #     form = JobApplyForm(request.POST or None)

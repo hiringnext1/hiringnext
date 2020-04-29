@@ -13,6 +13,7 @@ from django.template.defaultfilters import slugify
 from employer.models import CompanyProfile
 from taggit.managers import TaggableManager
 
+
 # Create your models here.
 
 
@@ -83,8 +84,8 @@ class Industry(models.Model):
 
 
 class FunctionalArea(models.Model):
-    industry = models.ForeignKey(Industry)
-    default_industry = models.ForeignKey('Industry', related_name='Default_Industry', null=True, blank=True)
+    industry = models.ForeignKey(Industry, on_delete=models.CASCADE)
+    default_industry = models.ForeignKey('Industry', related_name='Default_Industry', null=True, blank=True, on_delete=models.CASCADE)
     functional_area = models.CharField(max_length=30, unique=True)
     slug = models.SlugField(unique=True)
 
@@ -136,31 +137,36 @@ class Jobopening(models.Model):
         blank=True,
     )
     job_title = models.CharField(max_length=50, verbose_name='Designation', editable=True)
-    slug = models.SlugField(max_length=40)
+    slug = models.SlugField(max_length=100, null=True, blank=True)
     company_name = models.ForeignKey(CompanyProfile, on_delete=models.CASCADE, verbose_name='Company Name')
     job_location = models.ForeignKey(JobLocation, on_delete=models.CASCADE, verbose_name='Job Location')
-    job_location_sample = models.CharField(choices=JOB_LOCATION_CHOICES, max_length=20, null=True,
-                                           verbose_name='Sample Job Location')
+    # job_location_sample = models.CharField(choices=JOB_LOCATION_CHOICES, max_length=20, null=True,
+    #                                        verbose_name='Sample Job Location')
     experience = models.DecimalField(decimal_places=1, max_digits=5, null=True, verbose_name='Experience')
-    experience_choice = models.DecimalField(choices=EXPERIENCE_CHOICE, decimal_places=0, max_digits=3, null=True, blank=True)
-    skill = models.CharField(max_length=100, verbose_name='Skills')
+    # experience_choice = models.DecimalField(choices=EXPERIENCE_CHOICE, decimal_places=0, max_digits=3, null=True, blank=True)
+    skill = models.CharField(max_length=100, verbose_name='Skills', blank=True, null=True)
     qualification = models.CharField(choices=QUALIFICATION_CHOICES, max_length=100, verbose_name='Qualification')
-    min_salary_budget = models.DecimalField(decimal_places=2, max_digits=10, null=True, verbose_name='Min. Salary Criteria', help_text='Mention Salary in Annual Packages only')
-    max_salary_budget = models.DecimalField(decimal_places=2, max_digits=10, null=True, verbose_name='Max. Salary Criteria', help_text='Mention Salary in Annual Packages only')
-    referral_reward = models.DecimalField(decimal_places=0, max_digits=10, null=True, verbose_name='Referral Amount')
-    industry = models.ForeignKey(Industry, null=True, blank=True)
-    functional_area = models.ForeignKey(FunctionalArea, null=True, blank=True)
-    default_industry = models.ForeignKey(DefaultIndustry, null=True, blank=True)
-    role_category = models.CharField(max_length=50, verbose_name='Role Category')
+    min_salary_budget = models.DecimalField(decimal_places=2, max_digits=10, null=True,
+                                            verbose_name='Min. Salary Criteria',
+                                            help_text='Mention Salary in Annual Packages only')
+    max_salary_budget = models.DecimalField(decimal_places=2, max_digits=10, null=True,
+                                            verbose_name='Max. Salary Criteria',
+                                            help_text='Mention Salary in Annual Packages only')
+    referral_reward = models.DecimalField(decimal_places=0, max_digits=10, null=True, blank=True,
+                                          verbose_name='Referral Amount')
+    industry = models.ForeignKey(Industry, null=True, blank=True, on_delete=models.CASCADE)
+    functional_area = models.ForeignKey(FunctionalArea, null=True, blank=True, on_delete=models.CASCADE)
+    # default_industry = models.ForeignKey(DefaultIndustry, null=True, blank=True)
+    # role_category = models.CharField(max_length=50, verbose_name='Role Category')
     employment_type = models.CharField(choices=EMPLOYMENT_TYPE, max_length=100, verbose_name='Employment Type')
     job_description = models.TextField(verbose_name='Job Summary', null=True, blank=True)
     job_objective = models.TextField(verbose_name='Job Objectives', null=True, blank=True)
     must_have_skills = models.TextField(verbose_name='Must Have Skills', null=True, blank=True)
     bond_or_security = models.CharField(choices=BOND_OR_SECURITY, null=True, max_length=20, blank=True,
-                                           verbose_name='Bond Or Security')
+                                        verbose_name='Bond Or Security')
 
-    nice_to_have = models.CharField(max_length=500, verbose_name='Nice To Have', null=True)
-    job_created = models.DateTimeField(auto_created=True, null=True)
+    # nice_to_have = models.CharField(max_length=500, verbose_name='Nice To Have', null=True)
+    job_created = models.DateTimeField(auto_created=True, auto_now_add=True, null=True)
     active = models.BooleanField(default=True)
     Questions = models.ManyToManyField(ApplicationQuestions, default=None, verbose_name='Application Questionnaires')
 
@@ -173,16 +179,22 @@ class Jobopening(models.Model):
     class Meta:
         ordering = ["-job_created"]
 
+    def _get_unique_slug(self):
+        slug = slugify(self.job_title)
+        unique_slug = slug
+        num = 1
+        while Jobopening.objects.filter(slug=unique_slug).exists():
+            unique_slug = '{}-{}'.format(slug, num)
+            num += 1
+        return unique_slug
+
     def save(self, *args, **kwargs):
-        if not self.slug and self.job_title:
-            self.slug = slugify(self.job_title)
-        super(Jobopening, self).save(*args, **kwargs)
+        if not self.slug:
+            self.slug = self._get_unique_slug()
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('job-detail', kwargs={'slug': self.slug})
 
     def get_tag_url(self):
         return reverse("tagged", kwargs={"slug": self.slug})
-
-
-

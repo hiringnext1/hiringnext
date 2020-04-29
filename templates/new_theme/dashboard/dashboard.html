@@ -330,44 +330,21 @@
                                 <ul data-submenu-title="Start">
                                     <li><a href="{% url 'dashboard-admin' %}"><i
                                             class="icon-material-outline-dashboard"></i> Dashboard</a></li>
-                                    <li><a href="dashboard.html"><i
-                                            class="icon-material-outline-dashboard"></i> Active Openings</a></li>
-                                    <li><a href="dashboard-messages.html"><i
-                                            class="icon-material-outline-question-answer"></i> Messages <span
-                                            class="nav-tag">2</span></a></li>
-                                    <li><a href="dashboard-bookmarks.html"><i
-                                            class="icon-material-outline-star-border"></i>
-                                        Bookmarks</a></li>
-                                    <li><a href="dashboard-reviews.html"><i
-                                            class="icon-material-outline-rate-review"></i>
-                                        Reviews</a></li>
+
+                                    <li><a href="dashboard-manage-jobs.html"><i
+                                            class="icon-material-outline-business-center"></i>Manage Jobs</a></li>
+
+                                    <li><a href="dashboard-post-a-job.html"><i class="icon-material-outline-add"></i>Post
+                                        a Job</a></li>
+
+                                    {#                                    <li><a href="dashboard-manage-candidates.html">Manage Candidates</a></li>#}
                                 </ul>
 
-                                <ul data-submenu-title="Organize and Manage">
-                                    <li><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
-                                        <ul>
-                                            <li><a href="dashboard-manage-jobs.html">Manage Jobs <span
-                                                    class="nav-tag">3</span></a></li>
-                                            <li><a href="dashboard-manage-candidates.html">Manage Candidates</a></li>
-                                            <li><a href="dashboard-post-a-job.html">Post a Job</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#"><i class="icon-material-outline-assignment"></i> Tasks</a>
-                                        <ul>
-                                            <li><a href="dashboard-manage-tasks.html">Manage Tasks <span
-                                                    class="nav-tag">2</span></a></li>
-                                            <li><a href="dashboard-manage-bidders.html">Manage Bidders</a></li>
-                                            <li><a href="dashboard-my-active-bids.html">My Active Bids <span
-                                                    class="nav-tag">4</span></a></li>
-                                            <li><a href="dashboard-post-a-task.html">Post a Task</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
 
                                 <ul data-submenu-title="Account">
                                     <li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i>
                                         Settings</a></li>
-                                    <li><a href="index-logged-out.html"><i
+                                    <li><a href="#"><i
                                             class="icon-material-outline-power-settings-new"></i> Logout</a></li>
                                 </ul>
 
@@ -386,20 +363,14 @@
             <div class="dashboard-content-container" data-simplebar>
                 <div class="dashboard-content-inner">
 
-                    <!-- Dashboard Headline -->
-                    <div class="dashboard-headline">
-                        <h3>Howdy, {{ user }} ! <br><br>
-                            Welcome to Admin Dashboard</h3>
-                        <span>We are glad to see you again!</span>
-
-                        <!-- Breadcrumbs -->
-                        <nav id="breadcrumbs" class="dark">
-                            <ul>
-                                <li><a href="{% url 'index' %}">Home</a></li>
-                                <li>Admin Dashboard</li>
-                            </ul>
-                        </nav>
-                    </div>
+                    {#                    <!-- Dashboard Headline -->#}
+                    {#                    <div class="dashboard-headline">#}
+                    {#                        <h3>Hello, {{ user }} ! <br><br>#}
+                    {#                            Welcome to Admin Dashboard</h3>#}
+                    {#                        <span>We are glad to see you again!</span>#}
+                    {##}
+                    {#                        <!-- Breadcrumbs -->#}
+                    {#                    </div>#}
 
                     <!-- Fun Facts Container -->
                     <div class="fun-facts-container">
@@ -462,7 +433,9 @@
                                         {% for details in active_opening %}
 
                                             <tr>
-                                                <td data-label="Column 1">{{ details.job_title }}</td>
+                                                <td data-label="Column 1"><a target="_blank"
+                                                                             href="{% url 'job-detail' slug=details.slug %}">{{ details.job_title }}</a>
+                                                </td>
                                                 <td data-label="Column 2">{{ details.company_name }}</td>
                                                 <td data-label="Column 3">{{ details.job_location }}</td>
                                                 <td data-label="Column 4">{{ details.experience }}</td>
@@ -476,166 +449,16 @@
                                     </table>
                                 </div>
                             </div>
-                              <!-- Dashboard Box / End -->
+                            <!-- Dashboard Box / End -->
                         </div>
 
                     </div>
                     <!-- Row / End -->
-<h4 class="col-xl-offset-3 col-xl-6"><a href="#">Browse All Jobs</a></h4>
+{#                    <h4 class="col-xl-offset-3 col-xl-6"><a href="#">Browse All Jobs</a></h4>#}
 
                     <!-- Row -->
                     <div class="row">
 
-                        <!-- Dashboard Box -->
-                        <div class="col-xl-6">
-                            <div class="dashboard-box">
-                                <div class="headline">
-                                    <h3><i class="icon-material-baseline-notifications-none"></i> Notifications</h3>
-                                    <button class="mark-as-read ripple-effect-dark" data-tippy-placement="left"
-                                            title="Mark all as read">
-                                        <i class="icon-feather-check-square"></i>
-                                    </button>
-                                </div>
-                                <div class="content">
-                                    <ul class="dashboard-box-list">
-                                        <li>
-                                        <span class="notification-icon"><i
-                                                class="icon-material-outline-group"></i></span>
-                                            <span class="notification-text">
-										<strong>Michael Shannah</strong> applied for a job <a href="#">Full Stack Software Engineer</a>
-									</span>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="#" class="button ripple-effect ico" title="Mark as read"
-                                                   data-tippy-placement="left"><i class="icon-feather-check-square"></i></a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                        <span class="notification-icon"><i
-                                                class=" icon-material-outline-gavel"></i></span>
-                                            <span class="notification-text">
-										<strong>Gilber Allanis</strong> placed a bid on your <a href="#">iOS App Development</a> project
-									</span>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="#" class="button ripple-effect ico" title="Mark as read"
-                                                   data-tippy-placement="left"><i class="icon-feather-check-square"></i></a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="notification-icon"><i
-                                                    class="icon-material-outline-autorenew"></i></span>
-                                            <span class="notification-text">
-										Your job listing <a href="#">Full Stack Software Engineer</a> is expiring
-									</span>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="#" class="button ripple-effect ico" title="Mark as read"
-                                                   data-tippy-placement="left"><i class="icon-feather-check-square"></i></a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                        <span class="notification-icon"><i
-                                                class="icon-material-outline-group"></i></span>
-                                            <span class="notification-text">
-										<strong>Sindy Forrest</strong> applied for a job <a href="#">Full Stack Software Engineer</a>
-									</span>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="#" class="button ripple-effect ico" title="Mark as read"
-                                                   data-tippy-placement="left"><i class="icon-feather-check-square"></i></a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                        <span class="notification-icon"><i
-                                                class="icon-material-outline-rate-review"></i></span>
-                                            <span class="notification-text">
-										<strong>David Peterson</strong> left you a <span class="star-rating no-stars"
-                                                                                         data-rating="5.0"></span> rating after finishing <a
-                                                    href="#">Logo Design</a> task
-									</span>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="#" class="button ripple-effect ico" title="Mark as read"
-                                                   data-tippy-placement="left"><i class="icon-feather-check-square"></i></a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Dashboard Box -->
-                        <div class="col-xl-6">
-                            <div class="dashboard-box">
-                                <div class="headline">
-                                    <h3><i class="icon-material-outline-assignment"></i> Orders</h3>
-                                </div>
-                                <div class="content">
-                                    <ul class="dashboard-box-list">
-                                        <li>
-                                            <div class="invoice-list-item">
-                                                <strong>Professional Plan</strong>
-                                                <ul>
-                                                    <li><span class="unpaid">Unpaid</span></li>
-                                                    <li>Order: #326</li>
-                                                    <li>Date: 12/08/2018</li>
-                                                </ul>
-                                            </div>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="pages-checkout-page.html" class="button">Finish Payment</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="invoice-list-item">
-                                                <strong>Professional Plan</strong>
-                                                <ul>
-                                                    <li><span class="paid">Paid</span></li>
-                                                    <li>Order: #264</li>
-                                                    <li>Date: 10/07/2018</li>
-                                                </ul>
-                                            </div>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="pages-invoice-template.html" class="button gray">View
-                                                    Invoice</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="invoice-list-item">
-                                                <strong>Professional Plan</strong>
-                                                <ul>
-                                                    <li><span class="paid">Paid</span></li>
-                                                    <li>Order: #211</li>
-                                                    <li>Date: 12/06/2018</li>
-                                                </ul>
-                                            </div>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="pages-invoice-template.html" class="button gray">View
-                                                    Invoice</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="invoice-list-item">
-                                                <strong>Professional Plan</strong>
-                                                <ul>
-                                                    <li><span class="paid">Paid</span></li>
-                                                    <li>Order: #179</li>
-                                                    <li>Date: 06/05/2018</li>
-                                                </ul>
-                                            </div>
-                                            <!-- Buttons -->
-                                            <div class="buttons-to-right">
-                                                <a href="pages-invoice-template.html" class="button gray">View
-                                                    Invoice</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                     <!-- Row / End -->

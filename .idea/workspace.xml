@@ -1,59 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a20fe15a-34c8-4964-8648-0117b53fd2de" name="Default Changelist" comment="" />
+    <list default="true" id="a20fe15a-34c8-4964-8648-0117b53fd2de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/employer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/employer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobopening/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobopening/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobopening/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobopening/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobseeker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobseeker/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_theme/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_theme/dashboard/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_theme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_theme/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_theme/single-company-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_theme/single-company-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_theme/single-job-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_theme/single-job-page.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="sampledjango_indeedjobs: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="sqlite_master: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -65,20 +63,6 @@
         <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>search</find>
-      <find>lac</find>
-      <find>brows</find>
-      <find>index</find>
-      <find>middl</find>
-      <find>middle</find>
-      <find>downloader</find>
-      <find>block</find>
-      <find>browse</find>
-      <find>feature</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
@@ -102,7 +86,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -119,22 +103,22 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="scrapydjango" type="Python.DjangoServer" factoryName="Django server">
+    <configuration name="hiringnext" type="Python.DjangoServer" factoryName="Django server">
       <module name="ecommerce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="scrapydjango.settings" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ecommerce.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../hiringnextenv/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="localhost" />
+      <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="http://127.0.0.1:8000/" />
       <option name="runTestServer" value="false" />
@@ -218,6 +202,8 @@
       <workItem from="1586602717863" duration="733000" />
       <workItem from="1586603468460" duration="1142000" />
       <workItem from="1586606513836" duration="1458000" />
+      <workItem from="1588107017171" duration="5795000" />
+      <workItem from="1588149716273" duration="4375000" />
     </task>
     <task id="LOCAL-00001" summary="project update">
       <created>1563298857362</created>
@@ -272,33 +258,47 @@
     <option name="LAST_COMMIT_MESSAGE" value="project update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="141" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586606358776">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="141" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588087394498">
+      <screen x="0" y="27" width="1366" height="695" />
     </state>
+    <state x="141" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588087394498" />
     <state x="141" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606358776" />
+    <state x="416" y="123" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588155641422">
+      <screen x="0" y="27" width="1366" height="695" />
+    </state>
+    <state x="416" y="123" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588155641422" />
+    <state x="345" y="27" width="666" height="695" key="#hiringnext" timestamp="1588087505856">
+      <screen x="0" y="27" width="1366" height="695" />
+    </state>
+    <state x="345" y="27" width="666" height="695" key="#hiringnext/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588087505856" />
     <state x="345" y="27" width="666" height="741" key="#scrapydjango" timestamp="1586603650318">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="345" y="27" width="666" height="741" key="#scrapydjango/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586603650318" />
-    <state width="1320" height="175" key="GridCell.Tab.0.bottom" timestamp="1586606551488">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1320" height="40" key="GridCell.Tab.0.bottom" timestamp="1588156082695">
+      <screen x="0" y="27" width="1366" height="695" />
     </state>
+    <state width="1320" height="40" key="GridCell.Tab.0.bottom/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588156082695" />
     <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
-    <state width="1320" height="175" key="GridCell.Tab.0.center" timestamp="1586606551488">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1320" height="40" key="GridCell.Tab.0.center" timestamp="1588156082694">
+      <screen x="0" y="27" width="1366" height="695" />
     </state>
+    <state width="1320" height="40" key="GridCell.Tab.0.center/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588156082694" />
     <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
-    <state width="1320" height="175" key="GridCell.Tab.0.left" timestamp="1586606551488">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1320" height="40" key="GridCell.Tab.0.left" timestamp="1588156082694">
+      <screen x="0" y="27" width="1366" height="695" />
     </state>
+    <state width="1320" height="40" key="GridCell.Tab.0.left/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588156082694" />
     <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
-    <state width="1320" height="175" key="GridCell.Tab.0.right" timestamp="1586606551488">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1320" height="40" key="GridCell.Tab.0.right" timestamp="1588156082695">
+      <screen x="0" y="27" width="1366" height="695" />
     </state>
+    <state width="1320" height="40" key="GridCell.Tab.0.right/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588156082695" />
     <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
-    <state x="172" y="31" key="SettingsEditor" timestamp="1586607633291">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="172" y="27" width="1012" height="695" key="SettingsEditor" timestamp="1588155147949">
+      <screen x="0" y="27" width="1366" height="695" />
     </state>
+    <state x="172" y="27" width="1012" height="695" key="SettingsEditor/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588155147949" />
     <state x="172" y="31" key="SettingsEditor/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586607633291" />
   </component>
 </project>

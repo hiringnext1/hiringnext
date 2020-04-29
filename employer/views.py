@@ -23,7 +23,7 @@ from .models import CompanyProfile, ReferClient
 
 class CompanyProfileDetailView(DetailView):
     model = CompanyProfile
-    template_name = "company_page.html"
+    template_name = "new_theme/single-company-profile.html"
 
     def get_context_data(self, **kwargs):
         context = super(CompanyProfileDetailView, self).get_context_data(**kwargs)

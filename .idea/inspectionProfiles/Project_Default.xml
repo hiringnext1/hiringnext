@@ -31,7 +31,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="16">
+          <list size="28">
             <item index="0" class="java.lang.String" itemvalue="Django" />
             <item index="1" class="java.lang.String" itemvalue="virtualenv" />
             <item index="2" class="java.lang.String" itemvalue="pytz" />
@@ -48,6 +48,18 @@
             <item index="13" class="java.lang.String" itemvalue="python3-openid" />
             <item index="14" class="java.lang.String" itemvalue="idna" />
             <item index="15" class="java.lang.String" itemvalue="django-filter" />
+            <item index="16" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="17" class="java.lang.String" itemvalue="django-widget-tweaks" />
+            <item index="18" class="java.lang.String" itemvalue="django-newsletter" />
+            <item index="19" class="java.lang.String" itemvalue="django-autocomplete-light" />
+            <item index="20" class="java.lang.String" itemvalue="six" />
+            <item index="21" class="java.lang.String" itemvalue="django-appconf" />
+            <item index="22" class="java.lang.String" itemvalue="django-taggit" />
+            <item index="23" class="java.lang.String" itemvalue="django-webtest" />
+            <item index="24" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="25" class="java.lang.String" itemvalue="django-tagging-autocomplete" />
+            <item index="26" class="java.lang.String" itemvalue="django-extensions" />
+            <item index="27" class="java.lang.String" itemvalue="ldif3" />
           </list>
         </value>
       </option>
@@ -70,6 +82,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="whitenoise.django.DjangoWhiteNoise" />
+          <option value="object.get_context_data" />
         </list>
       </option>
     </inspection_tool>
