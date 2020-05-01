@@ -58,7 +58,7 @@ class AdminDashboard(ListView):
 
 class UserDashboard(ListView):
     model = Jobseeker
-    template_name = 'new_theme/dashboard/user-dashboard.html'
+    template_name = 'dashboard_admin/user-dashboard.html'
     paginate_by = 5
 
     def get_context_data(self, **kwargs):

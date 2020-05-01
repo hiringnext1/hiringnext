@@ -63,52 +63,7 @@
                 </nav>
             </div><!-- mobile navbar -->
 
-            <!-- form search area-->
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-md-4">
-                        <!-- logo -->
-                        <div class="logo text-center-sm"><a href="{% url 'index' %}"><h1 style="color: white">
-                            HiringNext</h1></a></div>
-                    </div>
-
-                    <div class="col-md-8">
-                        <!-- form search -->
-                        <form class="form-search-list" method="get" action="">
-                            <div class="row">
-                                <div class="col-sm-5 col-xs-6 ">
-                                    <div class="form-group">
-                                        <label class="color-white">What</label>
-                                        <input class="form-control" type="text" name="q" value="{{ request.get.q }}"
-                                               placeholder="job title, keywords or company name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-5 col-xs-6 ">
-                                    <div class="form-group">
-                                        <label class="color-white">Where</label>
-                                        <input class="form-control" placeholder="city, province, or region">
-                                    </div>
-                                </div>
-                                <div class="col-sm-2 col-xs-12 ">
-                                    <div class="form-group">
-                                        <label class="hidden-xs">&nbsp;</label>
-                                        <button class="btn btn-block btn-theme  btn-success" type="submit"
-                                                value="search">Search
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-right"><a href="#modal-advanced" data-toggle="modal" class="link-white">Advanced
-                                Search</a></p>
-                        </form>  <!-- form search -->
-                    </div>
-
-                </div>
-
-                <!-- modal Advanced search -->
-
-            </div><!-- end form search area-->
         </header><!-- end main-header -->
 
         <div class="body-content clearfix">

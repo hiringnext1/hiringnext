@@ -33,15 +33,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a20fe15a-34c8-4964-8648-0117b53fd2de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dashboard/templates/new_theme/dashboard/user-dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobopening/templates/jobopening/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobopening/templates/jobopening/jobs-list-layout-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobopening/templates/jobopening/single-job-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/new_theme/dashboard/user-dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard_admin/user-dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/new_theme/dashboard/dashboard_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_theme/dashboard/dashboard_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobopening/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobopening/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobopening/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobopening/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/industry/industry_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/industry/industry_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_theme/single-job-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_theme/single-job-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tag/tag_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tag/tag_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jobopening/templates/jobopening" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -84,17 +87,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/jobs_by_categories" />
-      <recent name="$PROJECT_DIR$/templates/Jobs_by_Location" />
-      <recent name="$PROJECT_DIR$/static/new_theme" />
-      <recent name="$PROJECT_DIR$/sampledjango" />
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jobopening/templates/jobopening" />
       <recent name="$PROJECT_DIR$/templates/jobs_by_location" />
       <recent name="$PROJECT_DIR$/templates/unused" />
       <recent name="$PROJECT_DIR$/templates/sampledjango" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jobopening/templates/jobopening" />
+      <recent name="$PROJECT_DIR$/jobopening/templates" />
+      <recent name="$PROJECT_DIR$/dashboard/templates/dashboard_admin" />
+      <recent name="$PROJECT_DIR$/templates/jobs_by_categories" />
+      <recent name="$PROJECT_DIR$/templates/Jobs_by_Location" />
     </key>
   </component>
   <component name="RunManager">
@@ -198,7 +202,10 @@
       <workItem from="1586603468460" duration="1142000" />
       <workItem from="1586606513836" duration="1458000" />
       <workItem from="1588107017171" duration="5795000" />
-      <workItem from="1588149716273" duration="6427000" />
+      <workItem from="1588149716273" duration="6526000" />
+      <workItem from="1588243505417" duration="4117000" />
+      <workItem from="1588332108759" duration="600000" />
+      <workItem from="1588350198394" duration="5964000" />
     </task>
     <task id="LOCAL-00001" summary="project update">
       <created>1563298857362</created>
@@ -270,25 +277,25 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="345" y="27" width="666" height="741" key="#scrapydjango/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586603650318" />
-    <state width="1320" height="97" key="GridCell.Tab.0.bottom" timestamp="1588157117643">
+    <state width="1320" height="114" key="GridCell.Tab.0.bottom" timestamp="1588354333448">
       <screen x="0" y="27" width="1366" height="695" />
     </state>
-    <state width="1320" height="97" key="GridCell.Tab.0.bottom/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588157117643" />
+    <state width="1320" height="114" key="GridCell.Tab.0.bottom/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588354333448" />
     <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
-    <state width="1320" height="97" key="GridCell.Tab.0.center" timestamp="1588157117643">
+    <state width="1320" height="114" key="GridCell.Tab.0.center" timestamp="1588354333448">
       <screen x="0" y="27" width="1366" height="695" />
     </state>
-    <state width="1320" height="97" key="GridCell.Tab.0.center/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588157117643" />
+    <state width="1320" height="114" key="GridCell.Tab.0.center/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588354333448" />
     <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
-    <state width="1320" height="97" key="GridCell.Tab.0.left" timestamp="1588157117642">
+    <state width="1320" height="114" key="GridCell.Tab.0.left" timestamp="1588354333447">
       <screen x="0" y="27" width="1366" height="695" />
     </state>
-    <state width="1320" height="97" key="GridCell.Tab.0.left/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588157117642" />
+    <state width="1320" height="114" key="GridCell.Tab.0.left/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588354333447" />
     <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
-    <state width="1320" height="97" key="GridCell.Tab.0.right" timestamp="1588157117643">
+    <state width="1320" height="114" key="GridCell.Tab.0.right" timestamp="1588354333448">
       <screen x="0" y="27" width="1366" height="695" />
     </state>
-    <state width="1320" height="97" key="GridCell.Tab.0.right/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588157117643" />
+    <state width="1320" height="114" key="GridCell.Tab.0.right/0.27.1366.695/1366.0.1600.900@0.27.1366.695" timestamp="1588354333448" />
     <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741/1366.0.1600.900@0.27.1366.741" timestamp="1586606551488" />
     <state x="172" y="27" width="1012" height="695" key="SettingsEditor" timestamp="1588155147949">
       <screen x="0" y="27" width="1366" height="695" />

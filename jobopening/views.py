@@ -30,7 +30,7 @@ class TagMixin(object):
 
 class IndexListView(TagMixin, ListView):
     model = Jobopening
-    template_name = 'new_theme/index.html'
+    template_name = 'jobopening/index.html'
 
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(kwargs)
@@ -38,9 +38,9 @@ class IndexListView(TagMixin, ListView):
             'total_opening': Jobopening.objects.all(),
             'total_companies': CompanyProfile.objects.all(),
             'total_profiles': Jobseeker.objects.all(),
-            'industry': Industry.objects.filter(jobopening__functional_area__industry__isnull=False).distinct(),
-            'function_area': FunctionalArea.objects.all(),
-            'location': JobLocation.objects.all(),
+            'industry': Industry.objects.filter(jobopening__industry__isnull=False).distinct(),
+            'function_area': FunctionalArea.objects.filter(jobopening__functional_area__isnull=False).distinct(),
+            'location': JobLocation.objects.filter(jobopening__job_location__isnull=False).distinct(),
             'questions': ApplicationQuestions.objects.all(),
             'filter': JobFilter(self.request.GET, queryset=self.get_queryset()),
             'location_choice': JOB_LOCATION_CHOICES,
@@ -55,7 +55,7 @@ class JobopeningListView(TagMixin, FormMixin, FilterView):
     model = Jobopening
     form_class = ReferCandidateForm
 
-    template_name = "new_theme/jobs-list-layout-2.html"
+    template_name = "jobopening/jobs-list-layout-2.html"
     filterset_class = JobFilter
     paginate_by = 5
     ordering = ['-job_created']
@@ -107,6 +107,7 @@ class IndustryListView(DetailView):
             'filter': JobFilter(self.request.GET, queryset=self.get_queryset()),
             'main_industry': Industry.objects.all(),
             'jobopening': Jobopening.objects.all(),
+            'industry': Industry.objects.all(),
             'function_area': FunctionalArea.objects.all(),
             # 'location': JobLocation.objects.all(),
             'questions': ApplicationQuestions.objects.all(),
@@ -155,7 +156,7 @@ class FunctionalAreaListView(DetailView):
 class JobopeningDetailView(TagMixin, FormMixin, DetailView):
     model = Jobopening
     form_class = JobApplyForm
-    template_name = "new_theme/single-job-page.html"
+    template_name = "jobopening/single-job-page.html"
 
     def get_context_data(self, **kwargs):
         context = super(JobopeningDetailView, self).get_context_data(kwargs)

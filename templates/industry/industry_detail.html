@@ -34,19 +34,17 @@
 
                                 <div class="form">
 
-                                    {{ filter.form.as_p }}
+                                    {% render_field filter.form.job_title class="form-control" placeholder=filter.form.job_title.label %}
 
-                                    {#                                    {% render_field filter.form.job_title class="form-control" placeholder=filter.form.job_title.label %}#}
-                                    {##}
-                                    {#                                    <br>#}
-                                    {#                                    {{ filter.form.job_location.label_tag }}#}
-                                    {#                                    {% render_field filter.form.job_location class="selectpicker" %}#}
-                                    {##}
-                                    {#                                    <br>#}
-                                    {##}
-                                    {#                                    {{ filter.form.industry.label_tag }}#}
-                                    {#                                    {% render_field filter.form.industry class="selectpicker" %}#}
-                                    {#                                    <br>#}
+                                    <br>
+                                    {{ filter.form.job_location.label_tag }}
+                                    {% render_field filter.form.job_location class="selectpicker" data-live-search="true" %}
+
+                                    <br>
+
+                                    {{ filter.form.industry.label_tag }}
+                                    {% render_field filter.form.industry class="selectpicker" data-live-search="true" %}
+                                    <br>
 
                                 </div>
 
@@ -93,6 +91,7 @@
                     <div class="listings-container margin-top-35">
 
                         {% for job in object.jobopening_set.all %}
+
                                 <!-- Job Listing -->
                                 <a href="{{ job.get_absolute_url }}" class="job-listing">
 
@@ -146,7 +145,8 @@
                                     </div>
                                 </a>
 
-                        {% endfor %}
+                            {% endfor %}
+
 
 
 

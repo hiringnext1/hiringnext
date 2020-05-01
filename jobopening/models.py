@@ -84,8 +84,6 @@ class Industry(models.Model):
 
 
 class FunctionalArea(models.Model):
-    industry = models.ForeignKey(Industry, on_delete=models.CASCADE)
-    default_industry = models.ForeignKey('Industry', related_name='Default_Industry', null=True, blank=True, on_delete=models.CASCADE)
     functional_area = models.CharField(max_length=30, unique=True)
     slug = models.SlugField(unique=True)
 
@@ -155,7 +153,7 @@ class Jobopening(models.Model):
     referral_reward = models.DecimalField(decimal_places=0, max_digits=10, null=True, blank=True,
                                           verbose_name='Referral Amount')
     industry = models.ForeignKey(Industry, null=True, blank=True, on_delete=models.CASCADE)
-    functional_area = models.ForeignKey(FunctionalArea, null=True, blank=True, on_delete=models.CASCADE)
+    functional_area = models.ForeignKey(FunctionalArea, null=True, on_delete=models.CASCADE)
     # default_industry = models.ForeignKey(DefaultIndustry, null=True, blank=True)
     # role_category = models.CharField(max_length=50, verbose_name='Role Category')
     employment_type = models.CharField(choices=EMPLOYMENT_TYPE, max_length=100, verbose_name='Employment Type')
