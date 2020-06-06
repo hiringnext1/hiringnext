@@ -5,7 +5,7 @@ certifi==2020.4.5.1
 chardet==3.0.4
 defusedxml==0.6.0
 distlib==0.3.0
-Django==1.11.17
+Django==1.11.29
 django-allauth==0.35.0
 django-appconf==1.0.4
 django-autocomplete-light==3.5.1
